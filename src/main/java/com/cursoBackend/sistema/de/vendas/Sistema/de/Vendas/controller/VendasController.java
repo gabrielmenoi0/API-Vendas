@@ -20,7 +20,7 @@ public class VendasController {
     @Autowired
     private VendasService vendasService;
 
-    @GetMapping(path = "")
+    @GetMapping(path = "/vendas")
     public ResponseEntity<List<Vendas>> vendas() {
         return ResponseEntity.status(HttpStatus.OK).body(vendasService.findAll());
     }
